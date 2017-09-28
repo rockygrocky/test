@@ -1,0 +1,24 @@
+GIT_WORK_TREE=/public_html/bollardsdev/bollards/hooks git checkout -f develop
+
+Your server live directory: /home/cpitadmin/public_html/dev
+
+#!/bin/sh
+git --work-tree=/home/cpitadmin/public_html/dev --git-dir=/home/cpitadmin/public_html/dev/repo/site.git checkout -f
+
+
+git remote add live ssh://cpitadmin@107.180.39.239/home/cpitadmin/public_html/dev/repo/site.git
+
+
+
+git push production
+
+git push live master
+
+git checkout master
+git pull origin master
+
+
+
+git fetch origin 
+
+Cbt@6b9U#7w754
